@@ -1,0 +1,106 @@
+<html>
+
+<head>
+    <title>Tasya Mulya Widyanti - 06311940000071</title>
+    <meta charset="ulf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-widht, initial-scale=1">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script scr="./js/script.js"></script>
+      <style>
+        * {
+          margin:0;
+          padding: 0;
+          font-family: sans-serif;
+        }
+        .chartCard {
+          width: 100vw;
+          height: calc(120vh - 40px);
+          background: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .chartBox {
+          width: 650px;
+          padding: 70px;
+          border-radius: 20px;
+          border: solid 3px rgb (181, 197, 37);
+          background: #F0ECE3;
+        }
+      </style>
+</head>
+
+<body>
+      <h1 style="text-align: center;">Life Expectancy, Adult Mortality, dan Infant Death Negara Berawalan C</h1>
+        <div class="chartMenu">
+        </div>
+        <div class="chartCard">
+            <div class="chartBox">
+              <canvas id="myChart"></canvas>
+            </div>
+        </div>
+        <div class="Wrapper">
+          <div class="container"></div>
+          <div class="title"></div>
+    </div>  
+    <div class="chart-wrapper">
+        <canvas id="myChart"></canvas>
+    </div> 
+          
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/chart.js-plugin-labels-dv/dist/chartjs-plugin-labels.min.js"></script>    
+
+      <script>
+        const labels = ['Cote d lvoire','Cabo verde','Cambodia','Cameroon','Canada','Central African Republic','Chad','Chile','China','Colombia','Comoros','Congo','Costa Rica','Croatia','Cuba','Cyprus','Czechia'];
+      
+        const data = {
+          labels: labels,
+          datasets: [{
+            label: 'Life Expectancy',
+            backgroundColor: ['#E5E3C9','#D3E4CD','#94B49F','#789395','#BB6464','#C3DBD9','#CDB699','#BF8B67','#9D5353','#DEBA9D','#E6BA95','#A2B38B','#FAFDD6','#EEC373','#FFAB76','#6E5773','#9A9483'],
+            boarderWidth:3,
+            data: [806.2,1160.3,1029.5,864.3,1307.0,776.2,806.2,1271.2,1188.2,1172.6,985.3,944.7,1257.5,1217.9,1247.6,1274.8,2503.1],
+          },{
+            label: 'Adult Mortality',
+            backgroundColor: ['#E5E3C9','#D3E4CD','#94B49F','#789395','#BB6464','#C3DBD9','#CDB699','#BF8B67','#9D5353','#DEBA9D','#E6BA95','#A2B38B','#FAFDD6','#EEC373','#FFAB76','#6E5773','#9A9483'],
+            boarderWidth:3,
+            data: [6677,1859,3142,4718,1034,5329,3644,1018,1180,1988,3855,5164,1110,1424,921,866,2015],
+          },{
+            label: 'Adult Mortality',
+            backgroundColor: ['#E5E3C9','#D3E4CD','#94B49F','#789395','#BB6464','#C3DBD9','#CDB699','#BF8B67','#9D5353','#DEBA9D','#E6BA95','#A2B38B','#FAFDD6','#EEC373','#FFAB76','#6E5773','#9A9483'],
+            boarderWidth:3,
+            data: [984,0,268,879,32,264,718,32,4718,222,27,126,16,0,16,0,0],
+          }]
+        };
+      
+        const config = {
+          type: 'pie',
+          data: data,
+          options: {
+              responsive: true,  
+              plugins: {
+                    legend: {
+                        display: true,
+                        position: "bottom",
+                        labels: {
+                            color: 'black'
+                        }
+                    }
+                }
+            }
+          
+        };
+      </script>
+         
+         <script>
+            const myChart = new Chart(
+              document.getElementById('myChart'),
+              config
+            );
+          </script>
+          
+
+</body>
+
+</html>
